@@ -1,0 +1,9 @@
+@import "../../styles/mixin.scss";
+@import "../../styles/variables.scss";
+
+.icon-button {
+  color: $light-color;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

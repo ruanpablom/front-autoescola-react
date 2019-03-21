@@ -1,0 +1,49 @@
+@import "../../styles/mixin.scss";
+@import "../../styles/variables.scss";
+
+.navigation-drawer {
+  position: fixed;
+  left: -280px;
+  top: 0;
+  height: 100vh;
+  background-color: $dark-color;
+  @include box-shadow(5);
+  width: 260px;
+  transition: left 0.5s ease-in-out;
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__button {
+    color: $light-color;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+  }
+  &__open {
+    left: 0;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    &__item {
+      color: $light-color;
+      display: flex;
+      text-decoration: none;
+      padding: 10px;
+      outline: none;
+      span {
+        align-self: center;
+        font-weight: 400;
+        margin-left: 10px;
+      }
+      &:hover {
+        background-color: $med-color;
+      }
+      &-active {
+        background-color: $med-color;
+      }
+    }
+  }
+}

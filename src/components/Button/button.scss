@@ -1,0 +1,60 @@
+@import "../../styles/mixin.scss";
+@import "../../styles/variables.scss";
+
+.button {
+  color: $light-color;
+  background-color: $med-color;
+  border: none;
+  border-radius: 2px;
+  padding: 5px 12px;
+  text-decoration: none;
+  cursor: pointer;
+  @include box-shadow(2);
+  &--stroke {
+    border: 2px solid $light-color;
+    background-color: transparent;
+    &:hover {
+      background-color: $med-color;
+    }
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.add-button {
+  border: none;
+  background-color: transparent;
+  color: $light-color;
+  cursor: pointer;
+  font-size: 48px;
+  transition: all 0.2s ease-out;
+
+  &:hover,
+  &:focus {
+    outline: 0;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  .material-icons {
+    font-size: inherit;
+    background-color: $dark-color;
+  }
+
+  &--close {
+    font-size: 0px;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__container {
+    display: flex;
+    margin-top: -44px;
+    margin-bottom: 10px;
+    height: 48px;
+    justify-content: flex-end;
+  }
+}

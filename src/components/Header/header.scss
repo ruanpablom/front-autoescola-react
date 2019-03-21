@@ -1,0 +1,12 @@
+@import "../../styles/variables.scss";
+
+.header {
+  font-size: 48px;
+  font-weight: 300;
+  color: $light-color;
+  margin: 0;
+
+  &--centered {
+    text-align: center;
+  }
+}

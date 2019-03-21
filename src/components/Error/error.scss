@@ -1,0 +1,17 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.error {
+  text-align: center;
+  color: $light-color;
+
+  &__button {
+    color: $light-color;
+    background-color: $med-color;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 12px;
+    cursor: pointer;
+    @include box-shadow(2);
+  }
+}

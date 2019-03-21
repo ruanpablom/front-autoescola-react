@@ -1,0 +1,58 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+.new-item {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    color: $light-color;
+    transition: all 0.3s ease-out;
+    &--close {
+      margin-top: -100px;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &__buttons__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__button {
+    border: 2px solid $light-color;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 2px;
+    width: 80px;
+    margin: 10px 0 20px 10px;
+    color: inherit;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      outline: 0 !important;
+    }
+    &::-moz-focus-inner {
+      border: 0;
+    }
+  }
+  &__input {
+    width: 100%;
+    border: 2px solid $light-color;
+    background-color: transparent;
+    color: inherit;
+    padding: 10px;
+    border-radius: 4px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    @include box-shadow(2);
+
+    &::placeholder {
+      color: $light-color;
+      opacity: 0.5;
+    }
+    &:focus {
+      background-color: $med-color;
+    }
+  }
+}

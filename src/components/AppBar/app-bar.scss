@@ -1,0 +1,52 @@
+@import "../../styles/mixin.scss";
+@import "../../styles/variables.scss";
+
+.app-bar {
+  background-color: $med-color;
+  @include box-shadow(2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+
+  &__container {
+    height: 46px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 0 20px;
+    max-width: 600px;
+    color: $light-color;
+  }
+
+  &__reload {
+    display: flex;
+    align-items: center;
+    &--rotate {
+      @include rotation();
+    }
+  }
+
+  &__action {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    color: inherit;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &--rotation {
+      @include rotation();
+    }
+    &--danger {
+      color: red;
+    }
+  }
+
+  &__brand {
+    flex: 1;
+    padding-left: 8px;
+  }
+}
